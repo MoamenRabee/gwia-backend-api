@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block content %}
+
+<!--  END HEADER -->
+<header id="header">
+    <div class="index_header" style="background-image: url({% static 'assets/imgs/bg.JPG' %});">
+        <div class="overlay">
+            <div class="container">
+                <div class="row">
+                    <div class="col text_header">
+                        <h1 class="mb-5 text-center" id="heading_title">إرسال رسالة</h1>
+                        <h4 class="mb-5 text-center" id="heading_desc">اجعل رسالتك بناءه و طيبة 😍</h4>
+
+                        <form method="POST" enctype="multipart/form-data" novalidate>
+                            {% csrf_token %}
+                            
+                            {{ form|crispy }}
+
+                            <center>
+                                <button type="submit" class="btn btn-danger btn-lg"> ارسل الان &nbsp;
+                                    <i class="fas fa-paper-plane"></i></button>
+                            </center>
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--  END HEADER -->
+
+{% endblock content %}

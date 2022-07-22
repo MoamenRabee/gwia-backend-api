@@ -1,0 +1,51 @@
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="صراحة ,GWIA, guss who i am,خمن من انا, صارحني, saraha">
+    <meta name="description"
+        content="موقع اليكترونى يمكنك من ارسال رسائل وهميه لأشخاص عن طريق الكود بدون معرفة هويتك" />
+    <meta name="copyright" content="GWIA" />
+    <meta name="author" content="Moamen Rabee" />
+    <meta name="og:title" content="GWIA | Guss Who I Am">
+    <!-- <meta name="og:image" content="http://mrm-tech.com/imgs/logo.png"> -->
+    <meta name="og:image:type" content="image/png">
+    <!-- <meta name="og:url" content="http://mrm-tech.com/"> -->
+    <meta name="og:site_name" content="GWIA">
+
+    <title>GWIA</title>
+    <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/all.min.css' %}">
+    <link rel="stylesheet" href="{% static 'assets/css/style.css' %}">
+
+</head>
+
+<body>
+    <!-- START NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="{% url 'index' %}">
+                <img src="{% static 'assets/imgs/logo.png' %}" height="40" class="d-inline-block align-top" alt="mrmTech"
+                    loading="lazy">
+            </a>
+        </div>
+    </nav>
+    <!--  END NAVBAR -->
+
+    
+    {% block content %}{% endblock content %}
+
+    <!-- SCRIPT FILES -->
+
+    <script src="{% static 'assets/js/jquery.min.js' %}"></script>
+    <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+    <script src="{% static 'assets/js/all.min.js' %}"></script>
+    <script src="{% static 'assets/js/script.js' %}"></script>
+
+
+</body>
+
+</html>
